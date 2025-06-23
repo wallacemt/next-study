@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "@/globals.css";
+import ThemeProvider from "@/theme/ThemeProvider";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
 });
-
 
 export default function RootLayout({
   children,
@@ -14,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" data-lt-installed="true">
-      <body className={`${openSans.variable} antialiased`}>{children}</body>
-    </html>
+    <ThemeProvider>
+      <html lang="pt-br" data-lt-installed="true">
+        <body className={`${openSans.variable} antialiased`}>{children}</body>
+      </html>
+    </ThemeProvider>
   );
 }
