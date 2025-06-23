@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { ThemeTypographyVariants } from "@/theme/theme";
 import { Box } from "../Box";
 import { StyleSheet } from "@/theme/StyleSheet";

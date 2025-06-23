@@ -10,7 +10,7 @@ interface BoxProps {
 export const Box = ({ styleSheet, children, tag, ...props }: BoxProps) => {
   const Tag = tag || "div";
   return (
-    <BaseComponent as={Tag} stylesheet={styleSheet || ""} {...props}>
+    <BaseComponent as={Tag} stylesheet={styleSheet} {...props}>
       {children}
     </BaseComponent>
   );

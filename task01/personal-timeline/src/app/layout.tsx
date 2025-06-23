@@ -15,8 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <html lang="pt-br" data-lt-installed="true">
-        <body className={`${openSans.variable} antialiased`}>{children}</body>
+      <html lang="pt-br" data-lt-installed="true" >
+        <body className={`${openSans.variable} antialiased`} >{children}</body>
       </html>
     </ThemeProvider>
   );

@@ -13,7 +13,7 @@ const StyledBaseComponent = styled.div<StyledBaseComponentProps>`
   flex-direction: column;
   align-content: flex-start;
   flex-shrink: 0;
-  ${({ stylesheet }) => parseStyleSheet(stylesheet)};
+  ${({ stylesheet }) => stylesheet && parseStyleSheet(stylesheet)};
 `;
 
 export const BaseComponent = ({ ...props }) => {
