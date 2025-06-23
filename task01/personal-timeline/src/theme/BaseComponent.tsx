@@ -9,7 +9,11 @@ interface StyledBaseComponentProps {
 }
 
 const StyledBaseComponent = styled.div<StyledBaseComponentProps>`
-  ${({ stylesheet }) => parseStyleSheet(stylesheet)}
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-shrink: 0;
+  ${({ stylesheet }) => parseStyleSheet(stylesheet)};
 `;
 
 export const BaseComponent = ({ ...props }) => {

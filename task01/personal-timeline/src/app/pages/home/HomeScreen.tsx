@@ -3,6 +3,7 @@ import { Background } from "./patterns/Background";
 import { Menu } from "./patterns/Menu";
 import { Feed } from "./patterns/Feed";
 import { Text } from "@/components/Text";
+import { Footer } from "./patterns/Footer";
 
 export default function HomeScreen() {
   return (
@@ -11,8 +12,9 @@ export default function HomeScreen() {
       <Menu />
       <Feed>
         <Feed.Header />
-        <Text>Últimas Atualizações</Text>
+        <Text variant="display1">Últimas Atualizações</Text>
         <Feed.Posts />
+        <Footer />
       </Feed>
     </Box>
   );
