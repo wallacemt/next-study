@@ -1,25 +1,30 @@
-"use client";
 import React from "react";
 import styled from "styled-components";
-import { StyleSheet } from "./StyleSheet";
+import { StyleSheet } from '@src/theme/StyleSheet';
 import { parseStyleSheet } from "@skynexui/responsive_stylesheet";
 
-interface StyledBaseComponentProps {
-  stylesheet?: StyleSheet;
+interface StyledBaseComponent {
+  styleSheet?: StyleSheet;
+  ref: any;
 }
-
-const StyledBaseComponent = styled.div<StyledBaseComponentProps>`
+const StyledBaseComponent = styled.div<StyledBaseComponent>`
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   flex-shrink: 0;
-  ${({ stylesheet }) => stylesheet && parseStyleSheet(stylesheet)};
+  ${({ styleSheet }) => parseStyleSheet(styleSheet)}
 `;
 
-export const BaseComponent = ({ ...props }) => {
-  return <StyledBaseComponent {...props} />;
-};
+interface BaseComponentProps {
+  styleSheet: StyleSheet;
+  [key: string]: any;
+}; 
+export const BaseComponent = React.forwardRef<unknown, BaseComponentProps>((props, ref) => {
+  return (
+    <StyledBaseComponent ref={ref} {...props} />
+  )
+});
 
 BaseComponent.defaultProps = {
   styleSheet: {},
-};
+}
