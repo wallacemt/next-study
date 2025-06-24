@@ -1,5 +1,6 @@
 import { Box } from "@/components/Box";
 import { Image } from "@/components/Image";
+import Link from "@/components/Link";
 import { Text } from "@/components/Text";
 import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
@@ -23,9 +24,11 @@ Feed.Header = () => {
         alt="Imagem de perfil do usuário"
         styleSheet={{ width: "128px", height: "128px", borderRadius: "100%" }}
       />
+      <Link href="https://github.com/wallacemt" colorVariant="primary">
+        <FaGithub size={24} />
+      </Link>
       <FaYoutube size={24} />
       <FaInstagram size={24} />
-      <FaGithub size={24} />
       <FaLinkedin size={24} />
       <Text>Feed Header</Text>
     </Box>

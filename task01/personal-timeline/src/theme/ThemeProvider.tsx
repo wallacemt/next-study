@@ -4,7 +4,7 @@ import { ThemeProvider as StyledThemeProvider, useTheme as useStyledTheme } from
 import { theme, Theme } from "./theme";
 
 export const useTheme = (): Theme => {
-  return useStyledTheme() as unknown as Theme;
+  return useStyledTheme() as Theme;
 };
 
 interface ThemeProviderProps {

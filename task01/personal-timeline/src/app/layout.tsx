@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "@/globals.css";
 import ThemeProvider from "@/theme/ThemeProvider";
@@ -15,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <html lang="pt-br" data-lt-installed="true" >
-        <body className={`${openSans.variable} antialiased`} >{children}</body>
+      <html lang="pt-br" data-lt-installed="true">
+        <body className={`${openSans.variable}  `}>{children}</body>
       </html>
     </ThemeProvider>
   );
