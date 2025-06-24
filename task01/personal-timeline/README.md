@@ -1,3 +1,5 @@
-# Gerenciando conteúdo build time com file system - [#02 NextJS FullStack]
+# Project Personal Timeline
 
-...
+## 📌 Sobre o Projeto
+
+Projeto feito com styled components e usando o NextJs para interface
